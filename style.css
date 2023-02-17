@@ -1,0 +1,27 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    background-image: url("fotomosaico_venue_final-02.png");
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 1000px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.centrado{
+    position: relative;
+    /* display:inline-block; */
+    width: 90%;
+    left: 5%;
+    top: 40%;
+    /* background-color: purple; */
+    /* justify-content: center; */
+}
+
+.banner{
+    position: relative;
+    width: 60%;
+    left: 20%;
+}

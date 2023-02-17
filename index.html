@@ -4,9 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>iconnphotobooth.com</title>
 </head>
-<body>
-    <h1>iconnphotobooth.com</h1>
+<body onload="ajusta()">
+    <div class="centrado">
+        <img id="marco1" class="imagen" src="marco1.png" alt="" srcset="">
+        <img id="marco2" class="imagen" src="marco2.png" alt="" srcset="">
+        <img id="marco3" class="imagen" src="marco3.png" alt="" srcset="">
+        <img id="marco4" class="imagen" src="marco4.png" alt="" srcset="">
+        <img class="banner" src="tomarFoto.png" alt="" onclick="abrePhotobooth()">
+    </div>
+    <script>
+        function abrePhotobooth(){
+            window.open('https://iconnection2023.com/tomaFoto.html')
+        }
+
+        function ajusta(){
+            let marco1 = document.getElementById("marco1")
+            let marco2 = document.getElementById("marco2")
+            let marco3 = document.getElementById("marco3")
+            let marco4 = document.getElementById("marco4")
+
+            let aspectRatio = ''
+            let width = window.innerWidth
+            let height = window.innerHeight
+            
+            marco1.width = width / 6
+            marco1.height = width / 6
+            marco1.style.marginRight = width / 20 + 'px' 
+            
+            marco2.width = width / 6
+            marco2.height = width / 6
+            marco2.style.marginRight = width / 20 + 'px' 
+            
+            marco3.width = width / 6
+            marco3.height = width / 6
+            marco3.style.marginRight = width / 20 + 'px' 
+            
+            marco4.width = width / 6
+            marco4.height = width / 6 
+                        
+            if(window.innerWidth > window.innerHeight){
+                
+            }else{
+            
+            }
+
+        }
+
+    </script>
 </body>
 </html>
