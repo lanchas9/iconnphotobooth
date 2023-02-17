@@ -4,9 +4,9 @@ body{
     border: 0px;
     background-image: url("fotomosaico_venue_final-02.png");
     background-color: #cccccc; /* Used if the image is unavailable */
-    height: 1000px; /* You must set a specified height */
+    /*height: 1000px;  You must set a specified height */
     background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-repeat: repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
 }
 
@@ -16,6 +16,7 @@ body{
     width: 90%;
     left: 5%;
     top: 40%;
+    margin-top: 15%;
     /* background-color: purple; */
     /* justify-content: center; */
 }
