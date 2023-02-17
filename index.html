@@ -9,16 +9,66 @@
 </head>
 <body onload="ajusta()">
     <div class="centrado">
-        <img id="marco1" class="imagen" src="marco1.png" alt="" srcset="">
-        <img id="marco2" class="imagen" src="marco2.png" alt="" srcset="">
-        <img id="marco3" class="imagen" src="marco3.png" alt="" srcset="">
-        <img id="marco4" class="imagen" src="marco4.png" alt="" srcset="">
+        <div><img class="logo" src="Logo_Iconnection.png" alt=""></div>
+        <div class="letreroDiv">
+        <p class="letrero">Te invitamos a descargar los marcos digitales <br> para que puedas utilizarlos en tus fotos para Redes Sociales.</p>
+        </div>
+        <div class="marcosDiv">
+            <img id="marco1" class="imagen" src="marco1.png" alt="" srcset="">
+            <img id="marco2" class="imagen" src="marco2.png" alt="" srcset="">
+            <img id="marco3" class="imagen" src="marco3.png" alt="" srcset="">
+            <img id="marco4" class="imagen" src="marco4.png" alt="" srcset="">
+            <br>
+            <img id="descargar1" src="descargar.png" alt="" srcset="" onclick="mandafoto1">
+            <img id="descargar2" src="descargar.png" alt="" srcset="" onclick="mandafoto2">
+            <img id="descargar3" src="descargar.png" alt="" srcset="" onclick="mandafoto3">
+            <img id="descargar4" src="descargar.png" alt="" srcset="" onclick="mandafoto4">
+        </div>
+        <div class="letreroDiv">
+            <p class="letrero">También te invitamos a participar en nuestro photobooth para que <br>formes parte del mosaico de nuestra celebración Iconnection 2023 </p>
+            </div>
         <img class="banner" src="tomarFoto.png" alt="" onclick="abrePhotobooth()">
     </div>
     <script>
+        function mandafoto1(){
+            window.open('marco1.png')
+        }
+
+        function mandafoto2(){
+            window.open('marco2.png')
+        }
+
+        function mandafoto3(){
+            window.open('marco3.png')
+        }
+
+        function mandafoto4(){
+            window.open('marco4.png')
+        }
+
         function abrePhotobooth(){
             window.open('https://iconnection2023.com/tomaFoto.html')
         }
+
+        // function abrePhotobooth(){
+        //     muestraLoading()
+        //     setTimeout(() => {
+        //         window.open('https://iconnection2023.com/tomaFoto.html')
+        //     }, 5000);
+        // }
+
+        // function muestraLoading(){
+        //     let divNuevo = document.createElement("Div")
+        //     divNuevo.width = window.innerWidth
+        //     divNuevo.height = window.innerHeight
+        //     divNuevo.style.opacity= 0.7;
+
+        //     let loadingNuevo = document.createElement("Img")
+        //     loadingNuevo.src = "loading.gif"
+        //     loadingNuevo.width = window.innerWidth
+        //     divNuevo.appendChild(loadingNuevo)
+        //     document.body.append(divNuevo)
+        // }
 
         function ajusta(){
             let marco1 = document.getElementById("marco1")
@@ -29,27 +79,44 @@
             let aspectRatio = ''
             let width = window.innerWidth
             let height = window.innerHeight
+
+            let facorTam = 10
+
+            let download1 = document.getElementById("descargar1")
+            let download2 = document.getElementById("descargar2")
+            let download3 = document.getElementById("descargar3")
+            let download4 = document.getElementById("descargar4")
             
-            marco1.width = width / 6
-            marco1.height = width / 6
+            marco1.width = width / facorTam
+            marco1.height = width / facorTam
+            marco1.style.marginLeft = width / 30 + 'px'
             marco1.style.marginRight = width / 20 + 'px'
-            marco1.style.marginBottom = height / 20 + 'px' 
+            // marco1.style.marginBottom = height / 20 + 'px'  
+            download1.width = marco1.width
+            download1.style.marginLeft = marco1.style.marginLeft
+            download1.style.marginRight = marco1.style.marginRight    
             
-            marco2.width = width / 6
-            marco2.height = width / 6
+            marco2.width = width / facorTam
+            marco2.height = width / facorTam
             marco2.style.marginRight = width / 20 + 'px'
-            marco2.style.marginBottom = height / 20 + 'px' 
+            // marco2.style.marginBottom = height / 20 + 'px' 
+            download2.width = marco2.width
+            download2.style.marginRight = marco2.style.marginRight  
             
-            marco3.width = width / 6
-            marco3.height = width / 6
+            marco3.width = width / facorTam
+            marco3.height = width / facorTam
             marco3.style.marginRight = width / 20 + 'px'
-            marco3.style.marginBottom = height / 20 + 'px'  
-            
-            marco4.width = width / 6
-            marco4.height = width / 6 
+            // marco3.style.marginBottom = height / 20 + 'px'
+            download3.style.marginRight = marco3.style.marginRight    
+            download2.width = marco2.width
+
+            marco4.width = width / facorTam
+            marco4.height = width / facorTam
             marco4.style.marginRight = width / 20 + 'px'
-            marco4.style.marginBottom = height / 20 + 'px'
-                        
+            // marco4.style.marginBottom = height / 20 + 'px'
+            download4.style.marginRight = marco4.style.marginRight
+            download4.width = marco4.width
+            
             if(window.innerWidth > window.innerHeight){
                     
             }else{
