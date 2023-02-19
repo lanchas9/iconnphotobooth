@@ -7,28 +7,33 @@
     <link rel="stylesheet" href="style.css">
     <title>iconnphotobooth.com</title>
 </head>
-<body onload="ajusta()">
+<body onload="">
     <div class="centrado">
         <div><img class="logo" src="Logo_Iconnection.png" alt=""></div>
         <div class="letreroDiv">
-        <p class="letrero">Te invitamos a descargar los marcos digitales <br> para que puedas utilizarlos en tus fotos para Redes Sociales.</p>
+        <p class="letrero">Te invitamos a descargar los marcos digitales para que puedas utilizarlos en tus fotos para Redes Sociales.</p>
         </div>
         <div class="marcosDiv">
-            <img id="marco1" class="imagen" src="marco1.png" alt="" srcset="">
-            <img id="marco2" class="imagen" src="marco2.png" alt="" srcset="">
-            <img id="marco3" class="imagen" src="marco3.png" alt="" srcset="">
-            <img id="marco4" class="imagen" src="marco4.png" alt="" srcset="">
-            <br>
-            <img id="descargar1" src="descargar.png" alt="" srcset="" onclick="mandafoto1()">
-            <img id="descargar2" src="descargar.png" alt="" srcset="" onclick="mandafoto2()">
-            <img id="descargar3" src="descargar.png" alt="" srcset="" onclick="mandafoto3()">
-            <img id="descargar4" src="descargar.png" alt="" srcset="" onclick="mandafoto4()">
+            <a download="marco1.png" href="marco1.png" title="Descargar Marco Digital 1">
+                <img id="marco1" class="imagen" src="1.png" alt="" srcset="">
+            </a>
+            <a download="marco2.png" href="marco2.png" title="Descargar Marco Digital 2">
+                <img id="marco2" class="imagen" src="2.png" alt="" srcset="">
+            </a>
+            <a download="marco3.png" href="marco3.png" title="Descargar Marco Digital 3">
+                <img id="marco3" class="imagen" src="3.png" alt="" srcset="">
+            </a>
+            <a download="marco4.png" href="marco4.png" title="Descargar Marco Digital 4">
+                <img id="marco4" class="ultimo imagen" src="4.png" alt="" srcset="">
+            </a>
+            
         </div>
-        <div class="letreroDiv">
+        <br><br>
+        <!-- <div class="letreroDiv">
             <p class="letrero">También te invitamos a participar en nuestro photobooth para que <br>formes parte del mosaico de nuestra celebración Iconnection 2023 </p>
             </div>
         <img class="banner" src="tomarFoto.png" alt="" onclick="abrePhotobooth()">
-    </div>
+    </div> -->
     <script>
         function mandafoto1(){
             window.open('marco1.png')
@@ -81,41 +86,28 @@
             let height = window.innerHeight
 
             let facorTam = 10
-
-            let download1 = document.getElementById("descargar1")
-            let download2 = document.getElementById("descargar2")
-            let download3 = document.getElementById("descargar3")
-            let download4 = document.getElementById("descargar4")
             
             marco1.width = width / facorTam
             //marco1.height = width / facorTam
             marco1.style.marginLeft = width / 30 + 'px'
             marco1.style.marginRight = width / 20 + 'px'
             // marco1.style.marginBottom = height / 20 + 'px'  
-            download1.width = marco1.width
-            download1.style.marginLeft = marco1.style.marginLeft
-            download1.style.marginRight = marco1.style.marginRight    
             
             marco2.width = width / facorTam
             //marco2.height = width / facorTam
             marco2.style.marginRight = width / 20 + 'px'
             // marco2.style.marginBottom = height / 20 + 'px' 
-            download2.width = marco2.width
-            download2.style.marginRight = marco2.style.marginRight  
             
             marco3.width = width / facorTam
             //marco3.height = width / facorTam
             marco3.style.marginRight = width / 20 + 'px'
             // marco3.style.marginBottom = height / 20 + 'px'
-            download3.style.marginRight = marco3.style.marginRight    
-            download3.width = marco3.width
 
             marco4.width = width / facorTam
             //marco4.height = width / facorTam
             //marco4.style.marginRight = width / 20 + 'px'
             // marco4.style.marginBottom = height / 20 + 'px'
             //download4.style.marginRight = marco4.style.marginRight
-            download4.width = marco4.width
             
             if(window.innerWidth > window.innerHeight){
                     
